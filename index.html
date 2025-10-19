@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landpage</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-chubby/css/uicons-solid-chubby.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel="stylesheet" href="styles.css">
+<body>
+    <header>
+        <div class="right">
+            <button class="projects-btn" onclick="scrollToProjects()"><i class="fi fi-ss-paint"></i></button>
+            <button class="home-btn" onclick="scrollToHome()"><i class="fi fi-sr-home"></i></button>
+            <button class="planos-btn" onclick="scrollToPlanos()"><i class="fi fi-sr-usd-circle"></i></button>
+            <button class="dark-toggle" onclick="toggleDarkMode()"><i class="fi fi-ss-moon"></i></button>
+            <button><i class="fi fi-brands-instagram-circle"></i></button>
+        </div>
+    </header>
+    <section id="home-section">
+        <h1 class="main-title">HEND</h1>
+        <h3 class="subtitle">editor</h3>
+        <button class="buy-button" id="contact-btn" onclick="window.location.href='contact.html'">Entrar em Contato</button>
+    </section>
+
+    <section id='projects-section' class="projects-section">
+        <h1 class="title">Projetos</h1>
+        <div class="carrousel">
+            <div class="group">
+                <div class="card">1</div>
+                <div class="card">2</div>
+                <div class="card">3</div>
+                <div class="card">4</div>
+                <div class="card">5</div>
+                <div class="card">6</div>
+            </div>
+            <div  aria-hidden class="group">
+                <div class="card">1</div>
+                <div class="card">2</div>
+                <div class="card">3</div>
+                <div class="card">4</div>
+                <div class="card">5</div>
+                <div class="card">6</div>
+            </div>
+        </div>
+        <div class="carrousel">
+            <div class="group2">
+                <div class="card">1</div>
+                <div class="card">2</div>
+                <div class="card">3</div>
+                <div class="card">4</div>
+                <div class="card">5</div>
+                <div class="card">6</div>
+            </div>
+            <div  aria-hidden class="group2">
+                <div class="card">1</div>
+                <div class="card">2</div>
+                <div class="card">3</div>
+                <div class="card">4</div>
+                <div class="card">5</div>
+                <div class="card">6</div>
+            </div>
+        </div>
+    </section>
+
+    <section id='planos-section' class="planos-section">
+        <h1 class="title"><button onclick="window.location.href='info-planos.html'"><i class="fi fi-rr-info"></i></button>Planos</h1>
+        <div class="planos">
+            <div class="plano-1">
+                <div class="top">
+                    <h1 class="plan-title">Social Media</h1>
+                    <div class="preco">
+                        <p class="preco-txt">R$05,00*</p>
+                    </div>
+                    <button class="buy-button">Vamo Nesse!</button>
+                </div>
+                    <div class="beneficios">
+                        <li>vídeo vertical</li>
+                        <li>até 5 alterações</li>
+                        <li>até 1 minuto de duração</li>
+                        <li>ótimo para marketing</li>
+                        <li>legendas dinâmicas</li>
+                        <li>para Reels, Shorts ou TikTok</li>
+                        <li>prende atenção do público</li>
+                    </div>
+            </div>
+
+
+            <div class="plano-1">
+                <div class="top">
+                    <h1 class="plan-title">Youtube (básico)</h1>
+                    <div class="preco">
+                        <p class="preco-txt">R$10,00*</p>
+                    </div>
+                    <button class="buy-button">Vamo Nesse!</button>
+                </div>
+                    <div class="beneficios">
+                        <li>vídeo horizontal</li>
+                        <li>até 10 minutos de duração</li>
+                        <li>até 1 hora de arquivo bruto</li>
+                        <li>até 10 alterações</li>
+                    </div>
+            </div>
+
+
+            <div class="plano-1">
+                <div class="top">
+                    <h1 class="plan-title">Youtube (Avançado)</h1>
+                    <div class="preco">
+                        <p class="preco-txt">R$30,00*</p>
+                    </div>
+                    <button class="buy-button">Vamo Nesse!</button>
+                </div>
+                    <div class="beneficios">
+                        <li>vídeo horizontal</li>
+                        <li>até 30 minutos de duração</li>
+                        <li>edição dinâmica</li>
+                        <li>prende a atenção do púlbico</li>
+                    </div>
+            </div>
+
+            <div class="plano-1">
+                <div class="top">
+                    <h1 class="plan-title">Personalizado</h1>
+                    <div class="preco">
+                        <p class="preco-txt"></p>
+                    </div>
+                    <button class="buy-button" id="contact-btn" onclick="window.location.href='contact.html'">Entrar em Contato</button>
+                </div>
+                    <div class="beneficios">
+                        <li>faça um vídeo no seu próprio estilo!</li>
+                        <li>vídeo no formato que preferir</li>
+                        <li>até 40 minutos de duração</li>
+                        <li>ideal para eventos</li>
+                    </div>
+            </div>
+
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+<footer>
+    <div class="text-left">
+        <p><strong>* VALOR INICIAL DO PRODUTO.</strong> Pode aumentar conforme alterações e/ou complexidade.</p>
+        <h4>Para mais informações entre em contato pelo Gmail, Instagram<br>ou clique no ícone de informações (i)</h4>
+        <h5 style="filter:contrast(.5); font-weight: lighter; font-size: large;">hospedado gratuitamente por Vercel<br>Nenhum direito reservado</h5>
+    </div>
+    <div class="social-media-contact">
+        <button><i class="fi fi-sr-envelope"></i><h6>hendeditor.gmail.com</h6></button>
+        <button onclick="window.open('https://www.instagram.com/hend.editor/')"><i class="fi fi-sc-camera-retro"></i><h6>hend.editor</h6></button>
+    </div>
+</footer>
+</html>
