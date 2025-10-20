@@ -1,0 +1,15 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "mercado pago pix - para site Hend editor",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Henrique N. Borges",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mercadopago": "^2.9.0"
+  }
+}
