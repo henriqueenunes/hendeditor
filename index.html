@@ -11,7 +11,7 @@
         </div>
         <div class="right">
             <button class="home-btn" onclick="scrollToHome()"><i class="fi fi-sr-home"></i> Home</button>
-            <button class="sobre-btn" onclick="scrollToAbout()"><i class="fi fi-br-question"></i>Sobre</button>
+            <button id="about-btn" class="sobre-btn" onclick="scrollToAbout()"><i class="fi fi-br-question"></i>Sobre</button>
             <button class="projects-btn" onclick="scrollToProjects()"><i class="fi fi-ss-paint"></i> Projetos</button>
             <button class="planos-btn" onclick="scrollToPlanos()"><i class="fi fi-sr-usd-circle"></i> Planos</button>
             <button class="dark-toggle" onclick="toggleDarkMode()"><i class="fi fi-ss-moon"></i></button>
@@ -20,20 +20,17 @@
 
 </header>
     <div id="ham-menu" class="ham-menu">
-        <button class="sobre-btn" onclick="scrollToAbout()"><i class="fi fi-ss-paint"></i>Sobre</button>
-        <button class="projects-btn" onclick="scrollToProjects()"><i class="fi fi-ss-paint"></i> Projetos</button>
-        <button class="home-btn" onclick="scrollToHome()"><i class="fi fi-sr-home"></i> Home</button>
-        <button class="planos-btn" onclick="scrollToPlanos()"><i class="fi fi-sr-usd-circle"></i> Planos</button>
-        <button class="dark-toggle" onclick="toggleDarkMode()"><i class="fi fi-ss-moon"></i></button>
+            <button class="home-btn" onclick="scrollToHome()"><i class="fi fi-sr-home"></i> Home</button>
+            <button class="sobre-btn" onclick="scrollToAbout()"><i class="fi fi-br-question"></i>Sobre</button>
+            <button class="projects-btn" onclick="scrollToProjects()"><i class="fi fi-ss-paint"></i> Projetos</button>
+            <button class="planos-btn" onclick="scrollToPlanos()"><i class="fi fi-sr-usd-circle"></i> Planos</button>
+            <button class="dark-toggle" onclick="toggleDarkMode()"><i class="fi fi-ss-moon"></i></button>
 </div>
 
     <section id="home-section">
         <h1 class="main-title">HEND</h1>
         <h3 class="subtitle">editor e filmmaker</h3>
         <button class="buy-button" id="contact-btn" onclick="scrollToPlanos()">Ver Planos</button>
-    </section>
-    <section id='projects-section' class="projects-section">
-        <h1 class="title">Projetos</h1>
     </section>
 
     <section id="about-section" class="about-section">
@@ -86,6 +83,48 @@
             </div>
         </div>
     </section>
+    
+    <section id='projects-section' class="projects-section">
+        <h1 class="title">Projetos</h1>
+        <div class="carrousel">
+            <div class="group">
+                <div class="card">1</div>
+                <div class="card">2</div>
+                <div class="card">3</div>
+                <div class="card">4</div>
+                <div class="card">5</div>
+                <div class="card">6</div>
+            </div>
+            <div  aria-hidden class="group">
+                <div class="card">1</div>
+                <div class="card">2</div>
+                <div class="card">3</div>
+                <div class="card">4</div>
+                <div class="card">5</div>
+                <div class="card">6</div>
+            </div>
+        </div>
+        <div class="carrousel">
+            <div class="group2">
+                <div class="card">1</div>
+                <div class="card">2</div>
+                <div class="card">3</div>
+                <div class="card">4</div>
+                <div class="card">5</div>
+                <div class="card">6</div>
+            </div>
+            <div  aria-hidden class="group2">
+                <div class="card">1</div>
+                <div class="card">2</div>
+                <div class="card">3</div>
+                <div class="card">4</div>
+                <div class="card">5</div>
+                <div class="card">6</div>
+            </div>
+        </div>
+
+    </section>
+
     <section id='planos-section' class="planos-section">
         <h1 class="title"><button onclick="window.location.href='info-planos.html'"><i class="fi fi-rr-info"></i></button>Planos</h1>
         <button class='info-btn' onclick="window.location.href='info-planos.html'">Dúvidas?</button>
@@ -161,7 +200,7 @@
 
         </div>
     </section>
-    <script src="script.js"></script>
+
 </body>
 <footer>
     <div class="text-left">
@@ -178,4 +217,5 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-chubby/css/uicons-solid-chubby.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-st ight/css/uicons-solid-straight.css'>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
 </html>

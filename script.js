@@ -10,6 +10,9 @@ function toggleDarkMode() {
 }
 function scrollToAbout(){
     document.getElementById('about-section').scrollIntoView({behavior:'smooth'});
+    document.getElementById('about-btn').style.color='var(--destaque)';
+    document.getElementById('about-btn').style.textDecoration='underline';
+
 }
 function scrollToPlanos() {
     document.getElementById('planos-section').scrollIntoView({behavior:'smooth'});

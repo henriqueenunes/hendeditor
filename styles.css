@@ -22,6 +22,9 @@ body{
 body p, li{
     font-family: manrope;
 }
+h1,h2,h3,h4,h5,h6,p,button,li,iframe{
+    user-select: none;
+}
 :root{
     --bg:#b983ff;
     --txt:#F5F5F5;
@@ -197,7 +200,8 @@ header.dark-mode{
     }
 }
 .dark-toggle{
-    color:var(--toggle-btn)
+    color:white;
+    font-size: 25px;
 }
 .geral{
     display: flex;
@@ -515,9 +519,11 @@ h1{
     flex-direction: row;
     background: linear-gradient(180deg, var(--bg), #5410a1);
     padding: 8px;
+    flex-wrap: wrap;
+    gap:20px;
     border:none;
     border-radius:28px 28px 0 0;
-    justify-content: space-around;
+    justify-content: center;
 }
 .projects{
     display: flex;
