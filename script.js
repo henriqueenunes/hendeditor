@@ -1,11 +1,15 @@
 
 window.onload = function(){
-   handleGetTheme()
+   handleGetTheme();
+   this.document.getElementById("ham-menu").style.display="none";
 }
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
     const className = document.body.className
     handleSaveTheme(className)
+}
+function scrollToAbout(){
+    document.getElementById('about-section').scrollIntoView({behavior:'smooth'});
 }
 function scrollToPlanos() {
     document.getElementById('planos-section').scrollIntoView({behavior:'smooth'});
@@ -28,4 +32,14 @@ function handleGetTheme(){
         document.body.classList.toggle('dark-mode');
     } 
     
+}
+
+function d(){
+    let caixa = document.getElementById("ham-menu");
+    if (caixa.style.display == "none"){
+        caixa.style.display = "flex";
+    } else {
+        caixa.style.display = "none";
+        
+    }
 }

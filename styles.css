@@ -5,6 +5,8 @@
 @import url('https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css');
 @import url('https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-chubby/css/uicons-solid-chubby.css');
 @import url('https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/3.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css');
 body{
     height: auto;
     min-height: 100vh;
@@ -144,15 +146,16 @@ header{
     backdrop-filter: blur(10px);
     align-items: center;
     background-color:#10091883;
+    background: linear-gradient(180deg, #000, #00000000);
     border:none;
     border-radius:0 0 28px 28px;
     margin:0;
     display:flex;
     justify-content: space-between;
     top:0;
+    padding:0 28px;
     height:100px;
-    min-width: 100%;
-    width: 100%;
+    max-width: 100vw;
 }
 header h1{
     font-size: 50px;
@@ -172,6 +175,9 @@ header button {
 header.dark-mode{
     background-color: #f5f5f546;
 }
+.ham-btn, .ham-menu{
+    display: none;
+}
 .logo{
     display: flex;
     font-size: 50px;
@@ -179,7 +185,7 @@ header.dark-mode{
     align-items: center;
     text-align: center;
 }
-.projects-btn, .home-btn, .planos-btn, .dark-toggle{
+.projects-btn, .home-btn, .planos-btn, .dark-toggle, .sobre-btn{
     color:white;
     &:hover{
         cursor:pointer;
@@ -193,11 +199,146 @@ header.dark-mode{
 .dark-toggle{
     color:var(--toggle-btn)
 }
+.geral{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto;
+    padding:5px;
+    border-radius: 25px;
+    gap:0 5px;
+    background-color: #000000;
+}
+.bio{
+    width: 500px;
+    background:none;
+    border: 2px solid var(--principal);
+    border-radius: 20px;
+    height:fit-content;
+    padding:5px;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
+}
+.container{
+    margin: 0;
+    padding: 0;
+    border-radius: 20px;
+    width: 510px;
+    height:350px;
+}
+iframe{
+    border-radius: 20px;
+}
+.conhecimentos{
+    background:linear-gradient(180deg,#000000,var(--principal));
+    width: fit-content;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    padding:5px;
+    border: 2px solid var(--principal);
+    border-radius: 20px;
+    gap:15px 0;
+}
+.subsubtitle{
+    font-size: 3rem;
+    margin: 0 auto;
+}
+.programa{
+    background-color: #100918;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding:5px;
+    border-radius: 15px;
+    transition: .25s;
+    &:hover{
+        scale:1.02;
+        transition: .25s;
+    }
+}
+.programa h3{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 30px;
+    margin: 0;
+    padding:0;
+}
+.progress-container{
+    background-color: white;
+    width: 400px;
+    height:20px;
+    padding:5px;
+    border-radius: 10px;
+}
+#icon-programa{
+    font-size: 50px;
+    margin: 0;
+    display: flex;
+    padding: 0;
+}
+.top-progress{
+    display: flex;
+    justify-content: space-between;
+}
+@keyframes appear{
+    from{
+        width: 0%;
+    } to{
+        width: 93%;
+    }
+}
+@keyframes appear2{
+    from{
+        width: 0%;
+    } to{
+        width: 77%;
+    }
+}
+@keyframes appear3{
+    from{
+        width: 0%;
+    } to{
+        width: 49%;
+    }
+}
+.progress-bar{
+    background:linear-gradient(90deg, #100918, var(--principal));
+    width: 93%;
+    height:20px;
+    border-radius:5px;
+    animation: appear cubic-bezier(1,1,0,0);
+    animation-timeline:view();
+    animation-range: entry 50% cover 30%;
+}
+.progress-bar2{
+    background:linear-gradient(90deg, #100918, var(--principal));
+    width: 77%;
+    height:20px;
+    border-radius:5px;
+    animation: appear2 ease-out;
+    animation-timeline:view();
+    animation-range: entry 0 cover 25%;
+}
+.progress-bar3{
+    background:linear-gradient(90deg, #100918, var(--principal));
+    width: 49%;
+    height:20px;
+    border-radius:5px;
+    animation: appear3 ease-out;
+    animation-timeline:view();
+    animation-range: entry 0 cover 10%;
+}
 .plano-1{
     border:2px solid var(--principal);
     border-radius:20px;
     /*min-width:400px;*/
-    min-width: 150px;
+    min-width: 350px;
     padding:10px;
     height:auto;
     min-height: 400px;
@@ -238,6 +379,9 @@ section{
     display: flex;
     padding:0;
     align-self:flex-start;
+}
+.about-section{
+    padding-top: 10vh;
 }
 .projects-section{
     height:100vh;
@@ -384,9 +528,6 @@ h1{
     width:600px;
     height:300px;
 }
-
-
-
 /*contact*/
 
 @media (max-width:1080px){
@@ -394,6 +535,7 @@ h1{
         height:100px;
         display: flex;
         justify-content: space-between;
+        flex-direction: row-reverse;
     }
     section{
         padding-top:100px;
@@ -439,6 +581,25 @@ h1{
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+    .geral{
+        flex-direction: column;
+        width: fit-content;
+        gap:15px 0;
+        align-items: center;
+    }
+    .container{
+        max-width: 90vw;
+        justify-content: center;
+    }
+    .subsubtitle{
+        font-size: 2rem;
+    }
+    .bio, .conhecimentos{
+        width: 90vw;
+    } 
+    .progress-container{
+        max-width: 85vw;
     }
     .planos{
         display: flex;
@@ -502,6 +663,39 @@ h1{
     }
     form textarea{
         height:200px;
+    }
+    .right{
+        display: none;
+    }
+    .ham-menu{
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        align-self: flex-start;
+        backdrop-filter: blur(1px);
+        background: linear-gradient(90deg, #100918, #00000000);
+        width: auto;
+        height: auto;
+        z-index: 9;
+        border-radius: 0px 20px 20px 0px;
+        gap:30px 0;
+        padding:10px 30px;
+        margin:100px 0;
+    }
+    .ham-menu button{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+        margin: 0;
+        padding:0;
+        gap:10px;
+
+    }
+    .ham-btn{
+        display: flex;
+        position: relative;
+        font-size: 2rem;
     }
 
 }

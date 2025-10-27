@@ -34,3 +34,43 @@
                 <div class="card">6</div>
             </div>
         </div>
+
+
+
+
+
+import 'dotenv/config';
+import { MercadoPagoConfig, Order } from "mercadopago";
+
+const client = new MercadoPagoConfig({
+	accessToken: process.env.accessToken,
+	options: { timeout: 5000 },
+});
+
+const order = new Order(client);
+
+const body = {
+	type: "online",
+	processing_mode: "automatic",
+	total_amount: "1000.00",
+	external_reference: "ext_ref_1234",
+	payer: {
+		email: "hendpessoa@gmail.com",
+	},
+	transactions: {
+		payments: [
+			{
+				amount: "1000.00",
+				payment_method: {
+					id: "pix",
+					type: "credit_card",
+					token: "<CARD_TOKEN>",
+					installments: 1,
+					statement_descriptor: "Hend Editor",
+				},
+			},
+		],
+	},
+};
+
+order.create({ body }).then(console.log).catch(console.error);

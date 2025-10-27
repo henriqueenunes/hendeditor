@@ -6,9 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "type": "module",
   "author": "Henrique N. Borges",
   "license": "ISC",
   "dependencies": {
+    "@mercadopago/sdk-js": "^0.0.3",
+    "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "mercadopago": "^2.9.0"
   }
