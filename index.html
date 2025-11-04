@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>landpage</title>
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script src="script.js"></script>
 <body>
     <header>
         <div class="left-header">
@@ -105,7 +107,7 @@
                     <div class="preco">
                         <p class="preco-txt">R$05,00*</p>
                     </div>
-                    <button class="buy-button">Vamo Nesse!</button>
+                    <button class="buy-button" onclick="window.location.href='buy-form.html'">Vamo Nesse!</button>
                 </div>
                     <div class="beneficios">
                         <li>vídeo vertical</li>
@@ -125,7 +127,7 @@
                     <div class="preco">
                         <p class="preco-txt">R$10,00*</p>
                     </div>
-                    <button class="buy-button" onclick="window.location.href='youtube-buy.html'">Vamo Nesse!</button>
+                    <button class="buy-button" onclick="window.location.href='buy-form.html'">Vamo Nesse!</button>
                 </div>
                     <div class="beneficios">
                         <li>vídeo horizontal</li>
@@ -136,21 +138,6 @@
             </div>
 
 
-            <div class="plano-1">
-                <div class="top">
-                    <h1 class="plan-title">Comercial</h1>
-                    <div class="preco">
-                        <p class="preco-txt">R$30,00*</p>
-                    </div>
-                    <button class="buy-button">Vamo Nesse!</button>
-                </div>
-                    <div class="beneficios">
-                        <li>vídeo horizontal</li>
-                        <li>até 5 minutos de duração</li>
-                        <li>edição rítmica</li>
-                        <li>ótimo parapromover produtos</li>
-                    </div>
-            </div>
 
             <div class="plano-1">
                 <div class="top">
@@ -170,7 +157,8 @@
 
         </div>
     </section>
-    <script src="script.js"></script>
+
+
 </body>
 <footer>
     <div class="text-left">

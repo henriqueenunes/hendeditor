@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body class="buy-body">
+    <img class="tutorial-img" src="1.png">
+    <form id="formulario" class="buy-form">
+        <p class="info-p">*campo obrigatório</p>
+        <button class="exit-btn" onclick="window.location.href='index.html'"><i class="fi fi-br-cross"></i></button>
+        <label>Link para Google Drive*</label>
+        <input type="url" class="buy-input" placeholder="Seu link" required>
+        <label>Nome Completo*</label>
+        <input type="nome" class="buy-input" placeholder="Nome Completo" required>
+        <label>Email*</label>
+        <input type="email" class="buy-input" placeholder="pessoalegal@gmail.com" required>
+        <label>Detalhes</label>
+        <textarea type="textarea" class="buy-textarea" placeholder="público alvo, tom do vídeo, referencia de estilo..."></textarea>
+        <button class="buy-btn" type="submit">Próximo</button>
+    </form>
+<script>
+  document.getElementById("formulario").addEventListener("submit", async function(e) {
+    e.preventDefault();
+    const dados = {
+      nome: e.target.nome.value,
+      email: e.target.email.value,
+      link: e.target.link.value,
+      textarea: e.target.textarea.value
+    };
+    alert(dados),
+
+    await fetch("/api/enviar", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(dados)
+    });
+
+    alert("Formulário enviado!");
+  });
+</script>
+</body>
+<link rel="stylesheet" href="styles.css">
+<script src="script.js"></script>
+</html>
